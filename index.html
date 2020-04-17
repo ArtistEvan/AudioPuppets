@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Audio Puppets: Dexin</title>
+</head>
+<style>
+body {
+background: orange;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.js"></script>
+<script>
+let mic;
+
+ function setup(){
+  cnv.mousePressed(userStartAudio);
+  mic = new p5.AudioIn();
+  mic.start();
+}
+
+function draw(){
+  micLevel = mic.getLevel();
+
+	if (micLevel < 5) {
+		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
+	} else {
+		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
+}
+</script>
+<body>
+<div align="center">
+<b>Dexin the Space Dog</b><br>
+powered by audioPuppets<br><br>
+
+<img id="dexin" src="https://i.imgur.com/ZxhWMWk.gif" style="width:353px">
+<br><br><br>
+<button onclick="document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif'")>Talk</button>
+<button onclick="document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif'")>Shut Up</button>
+<button onclick="location.reload();">Stop</button>
+<script>
+location.reload();
+break;
+</script>
+</div>
+</body>
+</html>
