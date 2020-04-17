@@ -11,24 +11,20 @@ background: orange;
 <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.js"></script>
 <script>
-let mic;
+var mic;
 
  function setup(){
-  let cnv = createCanvas(100, 100);
-  cnv.mousePressed(userStartAudio);
-  textAlign(CENTER);
+  createCanvas(200, 200);
   mic = new p5.AudioIn();
   mic.start();
+  
 }
 
 function draw(){
-  background(0);
-  fill(255);
-  text('tap to start', width/2, 20);
-
-  micLevel = mic.getLevel();
-  let y = height - micLevel*4 * height;
-  ellipse(width/2, y, 10, 10);
+ background(51);
+ var vol = mic.getLevel();
+ 
+ ellipse(100, 100, vol*200 , vol*200);
 }
 </script>
 <body>
