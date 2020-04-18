@@ -14,18 +14,24 @@ background: orange;
 var mic;
 
  function setup(){
-  createCanvas(200, 200);
+  createCanvas(1000, 200);
   mic = new p5.AudioIn();
   mic.start();
   
 }
 
 function draw(){
- background(51);
+ background(255,165,0);
  var level = mic.getLevel();
- var volu = map(level, 0, 1, 0, 200)
+ var volu = level * 100;
  
- ellipse(100, 100, 200, volu*100);
+ ellipse(100, 100, 200, level*3000);
+	
+  if (volu > 50) {
+		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
+	} else if (talki < 50) {
+		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
+	}
 }
 </script>
 <body>
