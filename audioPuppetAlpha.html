@@ -30,20 +30,18 @@ function draw() {
   fill(152,251,152);
   stroke(1);
 
-  var h = map(vol, 0, 1, height, 0);
-	if (vol >= 0.0050) {
-  ellipse(width/2, height/2, 50, 50);
-document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
+  	if (vol >= 0.0050) {
+		ellipse(width/2, height/2, 50, 50);
+		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
 	}
-		else if (vol <= 0.0049) {
+	else if (vol <= 0.0049) {
 		ellipse(width/2, height/2, 20, 20);
-document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
+		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
 	}
 }
 </script>
 <body>
-	<br><br><br><br><br>
-<div align="center">
+<div align="center"><br><br><br><br><br>
 <b>Dexin the Space Dog</b><br>
 powered by audioPuppets<br><br>
 
