@@ -25,8 +25,10 @@ function draw(){
  var level = mic.getLevel();
  var volu = map(level, 0, 1, 0, 200)
  
- ellipse(100, 100, 200, volu*500);
-  if (volu > 200) {
+ ellipse(100, 100, 200, volu*100);
+ var talki = ellipse.getHight();
+	
+  if (talki > 200) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
 	} else {
 		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
