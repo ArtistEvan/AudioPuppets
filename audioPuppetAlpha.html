@@ -21,11 +21,12 @@ var mic;
 }
 
 function draw(){
- background(255);
+ background(51);
  var level = mic.getLevel();
- var volu = level.analyze();
  
  ellipse(100, 100, 400, level*3000);
+	
+ var volu = level.analyze();
 	
   if (volu >= 50) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
