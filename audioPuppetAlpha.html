@@ -14,9 +14,9 @@ background: orange;
 var mic;
 
  function setup(){
-  var cnv = createCanvas(500, 150);
+  var cnv = createCanvas(300, 300);
   var x = (windowWidth - width) / 2;
-  cnv.position(x, 550); 
+  cnv.position(x, 500); 
   mic = new p5.AudioIn();
   mic.start();
   
@@ -26,7 +26,7 @@ function draw(){
  background(255,165,0);
  var vol = mic.getLevel();
  
- ellipse(250, 75, 500, vol * 3000);
+ ellipse(150, 150, vol * 3000, vol * 3000);
  
 }
 </script>
