@@ -13,25 +13,31 @@ background: orange;
 <script>
 var mic;
 
- function setup(){
+function setup() {
   var cnv = createCanvas(300, 300);
   var x = (windowWidth - width) / 2;
   cnv.position(x, 500); 
+
   mic = new p5.AudioIn();
+
   mic.start();
-  
 }
 
-function draw(){
+function draw() {
  background(255,165,0);
- var vol = mic.getLevel();
- 
- ellipse(150, 150, vol * 5000, vol * 5000);
- 	
-  if (vol >= 0.5) {
-		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
-	} else if (vol <= 0.4) {
-		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
+
+  var vol = mic.getLevel();
+  fill(127);
+  stroke(0);
+
+  var h = map(vol, 0, 1, height, 0);
+	if (vol >= 0.0050) {
+  ellipse(width/2, height/2, 50, 50);
+document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
+	}
+		else if (vol <= 0.0049) {
+		ellipse(width/2, height/2, 20, 20);
+document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
 	}
 }
 </script>
