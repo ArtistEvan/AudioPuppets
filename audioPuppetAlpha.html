@@ -28,9 +28,9 @@ function draw(){
  
  ellipse(150, 150, vol * 5000, vol * 5000);
  	
-  if ellipse.hight() >= 100 {
+  if (vol >= 0.5) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
-	} else if ellipse.hight() <= 100 {
+	} else if ellipse.hight() <= 0.4 {
 		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
 	}
 }
