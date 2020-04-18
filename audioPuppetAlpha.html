@@ -14,19 +14,18 @@ background: orange;
 var mic;
 
  function setup(){
-  createCanvas(500, 150);
-	 
+  createCanvas(500, 150);	 
   mic = new p5.AudioIn();
   mic.start();
   
 }
 
 function draw(){
- background(255,165,0);
+ background(255);
  var level = mic.getLevel();
  var volu = level.analyze();
  
- ellipse(100, 100, 200, level*3000);
+ ellipse(100, 100, 400, level*3000);
 	
   if (volu >= 50) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
