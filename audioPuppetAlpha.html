@@ -30,11 +30,10 @@ function draw(){
  	
   if (vol >= 0.5) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
-	  break;
 	} else if (vol <= 0.4) {
 		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
-		break;
 	}
+	 setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
 }
 </script>
 <body>
