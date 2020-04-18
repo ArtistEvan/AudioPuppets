@@ -14,9 +14,9 @@ background: orange;
 var mic;
 
 function setup() {
-  var cnv = createCanvas(300, 300);
+  var cnv = createCanvas(200, 200);
   var x = (windowWidth - width) / 2;
-  cnv.position(x, 500); 
+  cnv.position(x, 400); 
 
   mic = new p5.AudioIn();
 
@@ -47,7 +47,7 @@ document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
 powered by audioPuppets<br><br>
 
 <img id="dexin" src="https://i.imgur.com/ZxhWMWk.gif" style="width:353px">
-<br><br><button onclick="setInterval(draw, 3000);">On</button><button onclick="clearInterval(vol)">Off</button><br><br><br>
+<br><br><br>
 </div>
 </body>
 </html>
