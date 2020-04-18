@@ -28,8 +28,10 @@ function draw(){
  ellipse(100, 100, 200, volu*1000);
   if (volu > 10) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
+	  	setTimeout(pollDOM, 300);
 	} else {
 		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
+		setTimeout(pollDOM, 300);
 	}
 }
 </script>
