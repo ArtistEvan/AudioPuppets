@@ -14,35 +14,29 @@ background: orange;
 var mic;
 
  function setup(){
-  createCanvas(200, 200);
+  var cnv = createCanvas(300, 300);
+  var x = (windowWidth - width) / 2;
+  cnv.position(x, 400); 
   mic = new p5.AudioIn();
   mic.start();
   
 }
 
 function draw(){
- background(51);
+ background(255,165,0);
  var vol = mic.getLevel();
  
- ellipse(100, 100, 200, vol*2500);
- console.log(vol);
+ ellipse(150, 150, vol * 5000, vol * 5000);
+ 
 }
 </script>
 <body>
- <a href="audioPuppetAlpha.html">Dexin</a>
 <div align="center">
 <b>Dexin the Space Dog</b><br>
 powered by audioPuppets<br><br>
 
 <img id="dexin" src="https://i.imgur.com/ZxhWMWk.gif" style="width:353px">
-<br><br><br>
-<button onclick="document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif'")>Talk</button>
-<button onclick="document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif'")>Shut Up</button>
-<button onclick="location.reload();">Stop</button>
-<script>
-location.reload();
-break;
-</script>
+<br><br><br><br><br>
 </div>
 </body>
 </html>
