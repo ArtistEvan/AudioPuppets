@@ -25,10 +25,10 @@ function draw(){
  var level = mic.getLevel();
  var volu = map(level, 0, 1, 0, 200)
  
- ellipse(100, 100, 200, volu*1000);
-  if (volu > 10) {
+ ellipse(100, 100, 200, volu*500);
+  if (volu > 100) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
-	  	setTimeout(pollDOM, 1000);
+	  	setTimeout(pollDOM, 1500);
 	} else {
 		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
 	}
