@@ -16,7 +16,7 @@ var mic;
  function setup(){
   var cnv = createCanvas(500, 150);
   var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
+  var y = (windowHeight - 800) / 1;
   cnv.position(x, y);
 	 
   mic = new p5.AudioIn();
@@ -27,13 +27,13 @@ var mic;
 function draw(){
  background(255,165,0);
  var level = mic.getLevel();
- var volu = level * 100;
+ var volu = (level * 100);
  
  ellipse(100, 100, 200, level*3000);
 	
-  if (volu > 50) {
+  if (volu >= 50) {
 		document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
-	} else if (talki < 50) {
+	} else if (volu <= 50) {
 		document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
 	}
 }
