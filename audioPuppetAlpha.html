@@ -27,7 +27,7 @@ var mic;
 function draw(){
  background(255,165,0);
  var level = mic.getLevel();
- var volu = (level * 100);
+ var volu = level.analyze();
  
  ellipse(100, 100, 200, level*3000);
 	
