@@ -16,7 +16,6 @@ var mic;
 function setup() {
   var cnv = createCanvas(100, 100);
   var x = (windowWidth - width) / 2;
-  background(255,165,0);
   cnv.position(x, 550);
 
   mic = new p5.AudioIn();
@@ -25,18 +24,20 @@ function setup() {
 }
 
 function draw() {
+  background(255,165,0);
+	
   var vol = mic.getLevel();
   fill(152,251,152);
   stroke(1);
 	
   var h = map(vol, 0, 1, height, 0)
+  
   if (vol >= 0.0050) {
-	document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
-	ellipse(width/2, height/2, 50, 50);
-	}
-  else if (vol <= 0.0049) {
-	document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
-	ellipse(width/2, height/2, 20, 20);
+	  	ellipse(width/2, height/2, 50, 50);
+	  document.getElementById('dexin').src='https://i.imgur.com/OYJV2B6.gif';
+	} else if (vol <= 0.0049) {
+	  	ellipse(width/2, height/2, 20, 20);
+	  document.getElementById('dexin').src='https://i.imgur.com/ZxhWMWk.gif';
 	}
 }
 </script>
