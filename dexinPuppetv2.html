@@ -28,17 +28,14 @@ function draw() {
 	
   var vol = mic.getLevel();
   fill(152,251,152);
-  stroke(1);
 	
-  var h = map(vol, 0, 1, height, 0)
-  
   if (vol >= 0.0059) {
 	  	ellipse(width/2, height/2, 75, 75);
 	  document.getElementById('dexin').src='dexintalk3.png';
 	} else if (vol >= 0.0045 && vol <= 0.0058) {
 	  	ellipse(width/2, height/2, 50, 50);
 	  document.getElementById('dexin').src='dexintalk2.png';
-	} else if (vol >= 0.0021 && vol <= 0.0044) {
+	} else if (vol >= 0.0030 && vol <= 0.0044) {
 	  	ellipse(width/2, height/2, 50, 50);
 	  document.getElementById('dexin').src='dexintalk1.png';
 	} else {
@@ -52,7 +49,7 @@ function draw() {
 <b>Dexin the Space Dog</b><br>
 powered by audioPuppets<br><br>
 
-<img id="dexin" src="dexintalk0.png" style="width:353px">
+<img id="dexin" src=" " style="width:353px">
 <br><br><br>
 </div>
 </body>
