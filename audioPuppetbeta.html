@@ -19,7 +19,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 500);
+  var cnv = createCanvas(400, 500);
+  var x = (windowWidth - width) / 2;
+  cnv.position(x, 300);
 
   // Create an Audio input
   mic = new p5.AudioIn();
