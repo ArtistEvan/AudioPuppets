@@ -32,13 +32,13 @@ function draw() {
 	
   var h = map(vol, 0, 1, height, 0)
   
-  if (vol >= 0.0050) {
+  if (vol >= 0.0059) {
 	  	ellipse(width/2, height/2, 75, 75);
 	  document.getElementById('dexin').src='dexintalk3.png';
-	} else if (vol >= 0.0040 && vol <= 0.0049) {
+	} else if (vol >= 0.0045 && vol <= 0.0059) {
 	  	ellipse(width/2, height/2, 50, 50);
 	  document.getElementById('dexin').src='dexintalk2.png';
-	} else if (vol >= 0.0030 && vol <= 0.0039) {
+	} else if (vol >= 0.0030 && vol <= 0.0044) {
 	  	ellipse(width/2, height/2, 50, 50);
 	  document.getElementById('dexin').src='dexintalk1.png';
 	} else {
