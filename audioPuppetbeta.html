@@ -41,11 +41,11 @@ function draw() {
 
   // Draw an ellipse with height based on volume
   var h = map(vol, 0, 1, height, 0);
-	if (vol >= 0.020) {
+	if (vol >= 0.015) {
 			image(imo, -1200, 0);
 	} else if  (vol >= 0.010) {
 			image(imo, -800, 0);
-	} else if  (vol >= 0.0050) {
+	} else if  (vol >= 0.005) {
 			image(imo, -400, 0);
 	} else {
 			image(imo, 0, 0);
