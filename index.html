@@ -5,38 +5,46 @@
 </head>
 <style>
 body {
-background: orange;
+background: url(https://i.imgur.com/qWDK9Fj.png);
 }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.js"></script>
-<script>
-var mic;
+ 
+h2 {
+  color: white;
+  font-family: verdana;
+}
 
- function setup(){
-  var cnv = createCanvas(300, 300);
-  var x = (windowWidth - width) / 2;
-  cnv.position(x, 400); 
-  mic = new p5.AudioIn();
-  mic.start();
+ b {
+  color: white;
+  font-family: verdana;
+ }
+ 
+ #ctnr {
+  width: 100%;
+ }
+ 
+ #logo {
   
-}
+ }
+ 
+ #nave {
+  
+ }
+ 
+ #main {
 
-function draw(){
- background(255,165,0);
- var vol = mic.getLevel();
+ }
  
- ellipse(150, 150, vol * 5000, vol * 5000);
+ #foot {
+  
+ }
  
-}
-</script>
+</style>
 <body>
-<div align="center">
-<b>Dexin the Space Dog</b><br>
-powered by audioPuppets<br><br>
-
-<img id="dexin" src="https://i.imgur.com/ZxhWMWk.gif" style="width:353px">
-<br><br><br><br><br>
+<div id="ctnr" align="center">
+ <div id="logo"> </div>
+ <div id="nave"> </div>
+ <div id="main"> </div>
+ <div id="foot"> </div>
 </div>
 </body>
 </html>
