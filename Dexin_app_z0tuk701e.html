@@ -36,11 +36,11 @@ function draw() {
   stroke(0);
 
   var h = map(vol, 0, 1, height, 0);
-	if (vol >= 0.015) {
+	if (vol >= 0.014) {
 			image(imo, -1200, 0);
-	} else if  (vol >= 0.010) {
+	} else if  (vol >= 0.009) {
 			image(imo, -800, 0);
-	} else if  (vol >= 0.005) {
+	} else if  (vol >= 0.004) {
 			image(imo, -400, 0);
 	} else {
 			image(imo, 0, 0);
